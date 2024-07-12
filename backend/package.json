@@ -5,11 +5,14 @@
     "deploy": "wrangler deploy --minify src/index.ts"
   },
   "dependencies": {
-    "@prisma/client": "^5.16.1",
+    "@prisma/client": "^5.16.2",
     "@prisma/extension-accelerate": "^1.1.0",
     "@pt12/medium-common": "^1.0.0",
-    "hono": "^4.4.12",
-    "prisma": "^5.16.1"
+    "@pt2024/medium-common": "^1.0.0",
+    "axios": "^1.7.2",
+    "cors": "^2.8.5",
+    "hono": "^4.4.13",
+    "prisma": "^5.16.2"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240529.0",

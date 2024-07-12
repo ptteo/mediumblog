@@ -1,31 +1,29 @@
 import z from "zod";
 
-
-
-//type inferernce in zod 
-// it is in common module to be accessed by both frontend and backend for type validation
-
-
 export const signupInput = z.object({
-  email: z.string().email(),
-  password: z.string().min(6),
-  name: z.string().optional()
+    username: z.string().email(),
+    password: z.string().min(6),
+    name: z.string().optional()
 })
- export const signinInput = z.object({
-    email: z.string().email(),
-    password: z.string().min(6)
- })
- export const createBlogInput = z.object({
-    title: z.string(),
-    content: z.string()
- })
- export const updateBlogInput = z.object({
+
+export type SignupInput = z.infer<typeof signupInput>
+
+export const signinInput = z.object({
+    username: z.string().email(),
+    password: z.string().min(6),
+})
+
+export type SigninInput = z.infer<typeof signinInput>
+
+export const createBlogInput = z.object({
     title: z.string(),
     content: z.string(),
-    id: z.string()
- })
+})
+export type CreateBlogInput = z.infer<typeof createBlogInput>
 
- export type SignupInput = z.infer<typeof signupInput>
- export type SigninInput = z.infer<typeof signinInput>
- export type CreateBlogInput = z.infer<typeof createBlogInput>
- export type updateBlogInput = z.infer<typeof updateBlogInput>
+export const updateBlogInput = z.object({
+    title: z.string(),
+    content: z.string(),
+    id: z.number()
+})
+export type UpdateBlogInput = z.infer<typeof updateBlogInput>

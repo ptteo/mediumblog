@@ -1,5 +1,5 @@
 {
-  "name": "@pt12/medium-common",
+  "name": "@pt2024/medium-common",
   "version": "1.0.0",
   "main": "dist/index.js",
   "scripts": {
